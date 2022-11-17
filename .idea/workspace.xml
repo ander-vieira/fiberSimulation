@@ -4,55 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/RaytracingSimulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/RaytracingModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Ray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Vector3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/AndCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/Condition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/CylinderCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/DirectionCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/NotCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/OrCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/PlaneDistanceCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/detector/Detector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/AttenuatorElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DetectorElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/Element.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/MirrorElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/RefractorElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/CylinderInterphase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/Interphase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/PlaneInterphase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/source/Source.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/source/SunSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulator/RaytracingSimulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulator/StuckDetector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/utils/VectorUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/FiberSimServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/controller/RaytracingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/controller/ViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/dto/RaytracingParamsDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/dto/RaytracingResultDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/mapper/RaytracingResultMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/SimulationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/util/MathUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layouts/mainLayout.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/simulation.ftl" afterDir="false" />
+    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Change gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "16",
-    "last_opened_file_path": "C:/Users/Usuario/IdeaProjects/fiberSimulationServer/src/main/resources/templates",
+    "last_opened_file_path": "C:/Users/Usuario/IdeaProjects/fiberSimulation",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "inlay.hints"
   }
@@ -138,6 +92,21 @@
       <option name="presentableId" value="Default" />
       <updated>1668641954487</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1668704549012</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668704549012</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Change gitignore">
+      <created>1668704899450</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668704899450</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +119,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Change gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change gitignore" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
