@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/RaytracingSimulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/RaytracingModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Ray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Vector3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/AndCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/Condition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/CylinderCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/DirectionCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/NotCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/OrCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/PlaneDistanceCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/detector/Detector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/AttenuatorElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DetectorElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/Element.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/MirrorElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/RefractorElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/CylinderInterphase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/Interphase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/PlaneInterphase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/source/Source.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/source/SunSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulator/RaytracingSimulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulator/StuckDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/utils/VectorUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/FiberSimServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/controller/RaytracingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/controller/ViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/dto/RaytracingParamsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/dto/RaytracingResultDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/mapper/RaytracingResultMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/SimulationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/util/MathUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layouts/mainLayout.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/simulation.ftl" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HeOBo4I2oJBXakSbJwt7bAphTU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "16",
+    "last_opened_file_path": "C:/Users/Usuario/IdeaProjects/fiberSimulationServer/src/main/resources/templates",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "inlay.hints"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuario\IdeaProjects\fiberSimulationServer\src\main\resources\templates" />
+      <recent name="C:\Users\Usuario\IdeaProjects\fiberSimulationServer\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FiberSimServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fibersim.server.FiberSimServerApplication" />
+      <module name="fiberSimulation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fibersim.server.dto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="fiberSimulation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="fiberSimulation" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FiberSimServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="" />
+      <created>1668641954487</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668641954487</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.fibersim.fiberSimServer.raytracing.simulator.RaytracingSimulator" memberName="future" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="com.fibersim.fiberSimServer.raytracing.common.Vector3.sub(ray.pos, ray.vel.scale(ds))" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
