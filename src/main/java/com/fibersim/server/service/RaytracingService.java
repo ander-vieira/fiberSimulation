@@ -60,6 +60,8 @@ public class RaytracingService {
         double R = paramsDTO.getR();
         double L = paramsDTO.getL();
 
+        //TODO Add support for data obtained from CSV files instead of constants
+
         WavelengthProvider wavelengthProvider = new DefaultWavelengthProvider(440e-9, 740e-9, 100);
 
         Medium mediumAir = new Medium("Air", new ConstantWFunction(1.0), new ConstantWFunction(0.0));
