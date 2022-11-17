@@ -2,18 +2,22 @@ package com.fibersim.core.model.element;
 
 import com.fibersim.core.model.common.Ray;
 import com.fibersim.core.model.condition.Condition;
+import com.fibersim.core.data.dopant.DyeDopant;
+import com.fibersim.core.model.wavelength.Wavelength;
+import com.fibersim.core.model.wavelength.provider.WavelengthProvider;
+import com.fibersim.core.model.wavelength.spectrum.WavelengthSpectrum;
 import com.fibersim.core.utils.VectorUtils;
 import com.fibersim.server.util.MathUtils;
 
 public class DyeDopantElement implements Element {
     private final Condition condition;
-    private final double alpha;
-    private final double quantumYield;
+    private final DyeDopant dyeDopant;
+    private final WavelengthSpectrum emissionSpectrum;
 
-    public DyeDopantElement(Condition condition, double N, double sigmaAbs, double quantumYield) {
+    public DyeDopantElement(Condition condition, DyeDopant dyeDopant, WavelengthProvider provider) {
         this.condition = condition;
-        this.alpha = N*sigmaAbs;
-        this.quantumYield = quantumYield;
+        this.dyeDopant = dyeDopant;
+        this.emissionSpectrum = new WavelengthSpectrum(provider, dyeDopant.getSigmaemi());
     }
 
     @Override
@@ -22,7 +26,9 @@ public class DyeDopantElement implements Element {
             return Double.POSITIVE_INFINITY;
         }
 
-        return MathUtils.randomExponential(this.alpha);
+        double alpha = dyeDopant.getN()*dyeDopant.getSigmaAbs().evaluate(ray.getWavelength());
+
+        return MathUtils.randomExponential(alpha);
     }
 
     @Override
@@ -31,12 +37,12 @@ public class DyeDopantElement implements Element {
             return;
         }
 
-        if(Math.random() < quantumYield) {
+        if(Math.random() < dyeDopant.getQuantumYield()) {
             ray.setVel(VectorUtils.randomDirection());
 
-            double newLambda = ray.getLambda(); //TODO
+            Wavelength newWavelength = this.emissionSpectrum.generateWavelength();
 
-            ray.setLambda(newLambda);
+            ray.setWavelength(newWavelength);
         } else {
             ray.kill();
         }

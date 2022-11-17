@@ -1,5 +1,6 @@
 package com.fibersim.core.model.element;
 
+import com.fibersim.core.data.medium.Medium;
 import com.fibersim.core.model.condition.Condition;
 import com.fibersim.core.model.common.Ray;
 import com.fibersim.server.util.MathUtils;
@@ -8,7 +9,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class AttenuatorElement implements Element {
     private final Condition condition;
-    private final double alpha;
+    private final Medium medium;
 
     @Override
     public double intersect(Ray ray) {
@@ -16,7 +17,7 @@ public class AttenuatorElement implements Element {
             return Double.POSITIVE_INFINITY;
         }
 
-        return MathUtils.randomExponential(this.alpha);
+        return MathUtils.randomExponential(this.medium.getAlpha().evaluate(ray.getWavelength()));
     }
 
     @Override

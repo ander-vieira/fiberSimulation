@@ -1,5 +1,6 @@
 package com.fibersim.core.model.element;
 
+import com.fibersim.core.data.medium.Medium;
 import com.fibersim.core.model.common.Ray;
 import com.fibersim.core.model.common.Vector3;
 import com.fibersim.core.model.condition.Condition;
@@ -12,8 +13,8 @@ import lombok.AllArgsConstructor;
 public class RefractorElement implements Element {
     private final Interphase interphase;
     private final Condition condition;
-    private final double N_plus;
-    private final double N_minus;
+    private final Medium mediumPlus;
+    private final Medium mediumMinus;
 
     @Override
     public double intersect(Ray ray) {
@@ -32,11 +33,11 @@ public class RefractorElement implements Element {
         double N_I, N_T;
 
         if(cosI > 0) {
-            N_I = this.N_minus;
-            N_T = this.N_plus;
+            N_I = this.mediumMinus.getN().evaluate(ray.getWavelength());
+            N_T = this.mediumPlus.getN().evaluate(ray.getWavelength());
         } else {
-            N_I = this.N_plus;
-            N_T = this.N_minus;
+            N_I = this.mediumPlus.getN().evaluate(ray.getWavelength());
+            N_T = this.mediumMinus.getN().evaluate(ray.getWavelength());
         }
 
         double sinI = Math.sqrt(1-cosI*cosI);

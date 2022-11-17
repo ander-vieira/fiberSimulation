@@ -1,5 +1,6 @@
 package com.fibersim.core.model.common;
 
+import com.fibersim.core.model.wavelength.Wavelength;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,15 +11,15 @@ public class Ray {
     @Setter
     private Vector3 vel;
     @Getter
-    private double lambda;
+    private Wavelength wavelength;
     @Getter
     private double power;
     private boolean alive;
 
-    public Ray(Vector3 pos, Vector3 vel, double lambda, double power) {
+    public Ray(Vector3 pos, Vector3 vel, Wavelength wavelength, double power) {
         this.pos = pos;
         this.vel = vel.unit();
-        this.lambda = lambda;
+        this.wavelength = wavelength;
         this.power = power;
         this.alive = true;
     }
@@ -27,11 +28,11 @@ public class Ray {
         this.pos = Vector3.add(this.pos, this.vel.scale(ds));
     }
 
-    public void setLambda(double lambda) {
+    public void setWavelength(Wavelength wavelength) {
         //Apply Stokes shift
-        this.power = this.power*this.lambda/lambda;
+        this.power = this.power*this.wavelength.getValue()/wavelength.getValue();
 
-        this.lambda = lambda;
+        this.wavelength = wavelength;
     }
 
     public boolean alive() {
