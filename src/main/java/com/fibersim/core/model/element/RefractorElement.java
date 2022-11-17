@@ -6,7 +6,7 @@ import com.fibersim.core.model.common.Vector3;
 import com.fibersim.core.model.condition.Condition;
 import com.fibersim.core.model.interphase.Interphase;
 import com.fibersim.core.utils.VectorUtils;
-import com.fibersim.server.util.MathUtils;
+import com.fibersim.core.utils.MathUtils;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

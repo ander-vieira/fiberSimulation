@@ -7,7 +7,7 @@ import com.fibersim.core.model.wavelength.Wavelength;
 import com.fibersim.core.model.wavelength.provider.WavelengthProvider;
 import com.fibersim.core.model.wavelength.spectrum.WavelengthSpectrum;
 import com.fibersim.core.utils.VectorUtils;
-import com.fibersim.server.util.MathUtils;
+import com.fibersim.core.utils.MathUtils;
 
 public class DyeDopantElement implements Element {
     private final Condition condition;

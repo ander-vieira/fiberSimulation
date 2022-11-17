@@ -3,7 +3,7 @@ package com.fibersim.core.model.element;
 import com.fibersim.core.data.medium.Medium;
 import com.fibersim.core.model.condition.Condition;
 import com.fibersim.core.model.common.Ray;
-import com.fibersim.server.util.MathUtils;
+import com.fibersim.core.utils.MathUtils;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
