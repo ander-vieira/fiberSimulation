@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Rh6G",
+    "quantumYield": 0.95,
+    "sigmaAbs": {
+      "type": "constant",
+      "value": 1e-22
+    },
+    "sigmaEmi": {
+      "type": "constant",
+      "value": 1e-22
+    }
+  }
+]

@@ -11,7 +11,7 @@ import java.util.LinkedHashMap;
 @Component
 public class MediumReader extends JsonDataReader<Medium> {
     @Autowired
-    WFunctionParser wFunctionReader;
+    WFunctionParser wFunctionParser;
 
     public Medium read(String name) {
         return elementList.stream().filter(medium -> medium.getName().equals(name)).findFirst().orElse(null);
@@ -25,8 +25,8 @@ public class MediumReader extends JsonDataReader<Medium> {
     @Override
     protected Medium mapToObject(LinkedHashMap<String, Object> hashMap) {
         String name = (String)hashMap.get("name");
-        WFunction refractionIndex = wFunctionReader.mapToObject((LinkedHashMap<String, Object>)hashMap.get("refractionIndex"));
-        WFunction attenuation = wFunctionReader.mapToObject((LinkedHashMap<String, Object>)hashMap.get("attenuation"));
+        WFunction refractionIndex = wFunctionParser.mapToObject((LinkedHashMap<String, Object>)hashMap.get("refractionIndex"));
+        WFunction attenuation = wFunctionParser.mapToObject((LinkedHashMap<String, Object>)hashMap.get("attenuation"));
         return new Medium(name, refractionIndex, attenuation);
     }
 }

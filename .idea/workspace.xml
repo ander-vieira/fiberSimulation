@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Add JSON data processing for medium data">
+    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Add JSON data processing for dye dopants">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/DyeDopantReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/dyeDopants.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/CSVParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/csv/CSVReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DyeDopantElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DyeDopantElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/resources/dopant/DyeDopant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/resources/dopant/DyeDopant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/MediumReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/MediumReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/WFunctionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/parser/WFunctionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +235,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669072857303</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Refactor resources package">
+      <created>1669073011617</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669073011617</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Refactor DyeDopant parameters">
+      <created>1669074268478</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669074268478</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,7 +279,10 @@
     <MESSAGE value="Remove unnecessary VectorUtils class" />
     <MESSAGE value="Refactor model package to raytracing" />
     <MESSAGE value="Add JSON data processing for medium data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add JSON data processing for medium data" />
+    <MESSAGE value="Refactor resources package" />
+    <MESSAGE value="Refactor DyeDopant parameters" />
+    <MESSAGE value="Add JSON data processing for dye dopants" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add JSON data processing for dye dopants" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
