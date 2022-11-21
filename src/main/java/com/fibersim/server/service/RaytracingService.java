@@ -2,10 +2,7 @@ package com.fibersim.server.service;
 
 import com.fibersim.core.data.medium.Medium;
 import com.fibersim.core.model.common.Vector3;
-import com.fibersim.core.model.condition.AndCondition;
-import com.fibersim.core.model.condition.Condition;
-import com.fibersim.core.model.condition.CylinderCondition;
-import com.fibersim.core.model.condition.PlaneDistanceCondition;
+import com.fibersim.core.model.condition.*;
 import com.fibersim.core.data.dopant.DyeDopant;
 import com.fibersim.core.model.element.*;
 import com.fibersim.core.model.interphase.CylinderInterphase;
@@ -72,19 +69,21 @@ public class RaytracingService {
                 new ConstantWFunction(sigmaAbs),
                 quantumYield);
 
-        Condition inCylinderCondition = new CylinderCondition(Vector3.O, Vector3.Z, R);
-        Condition inZAxisCondition = new PlaneDistanceCondition(Vector3.O, Vector3.Z, L);
-        Condition inFiberCondition = new AndCondition(inCylinderCondition, inZAxisCondition);
-
         Interphase leftEndInterphase = new PlaneInterphase(Vector3.O, Vector3.Z);
         Interphase rightEndInterphase = new PlaneInterphase(new Vector3(0, 0, L), Vector3.Z);
         Interphase cylinderInterphase = new CylinderInterphase(Vector3.O, Vector3.Z, R);
+
+        Condition inCylinderCondition = new CylinderCondition(Vector3.O, Vector3.Z, R);
+        Condition inZAxisCondition = new PlaneDistanceCondition(Vector3.O, Vector3.Z, L);
+        Condition inFiberCondition = new AndCondition(inCylinderCondition, inZAxisCondition);
+        Condition directionCondition = new DirectionCondition(rightEndInterphase);
+        Condition detectorCondition = new AndCondition(inCylinderCondition, directionCondition);
 
         Detector detector = new Detector(wavelengthProvider);
 
         Element attenuatorElement = new AttenuatorElement(inFiberCondition,
                 mediumPMMA);
-        Element detectorElement = new DetectorElement(rightEndInterphase, detector, inCylinderCondition);
+        Element detectorElement = new DetectorElement(rightEndInterphase, detector, detectorCondition);
         Element dyeDopantElement = new DyeDopantElement(inFiberCondition, dyeDopant, wavelengthProvider);
         Element mirrorElement = new MirrorElement(leftEndInterphase, inCylinderCondition);
         Element refractorElement = new RefractorElement(cylinderInterphase, inZAxisCondition,
