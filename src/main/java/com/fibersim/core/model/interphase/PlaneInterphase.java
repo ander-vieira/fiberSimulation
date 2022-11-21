@@ -24,10 +24,10 @@ public class PlaneInterphase implements Interphase {
         } else {
             double ds = posNormal/velNormal;
 
-            if(ds < 0) {
+            if(ds <= 0) {
                 return Double.POSITIVE_INFINITY;
             } else {
-                return posNormal/velNormal;
+                return ds;
             }
         }
     }
