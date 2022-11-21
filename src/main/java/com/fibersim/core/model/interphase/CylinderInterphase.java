@@ -1,6 +1,5 @@
 package com.fibersim.core.model.interphase;
 
-import com.fibersim.core.utils.VectorUtils;
 import com.fibersim.core.model.common.Ray;
 import com.fibersim.core.model.common.Vector3;
 
@@ -57,7 +56,7 @@ public class CylinderInterphase implements Interphase {
     public Vector3 getNormalVector(Vector3 pos) {
         Vector3 relativePos = Vector3.sub(pos, this.origin);
 
-        Vector3 cylinderPos = VectorUtils.projectOnSurface(relativePos, this.axis);
+        Vector3 cylinderPos = Vector3.projectOnSurface(relativePos, this.axis);
 
         return cylinderPos.unit();
     }

@@ -1,12 +1,12 @@
 package com.fibersim.core.model.element;
 
 import com.fibersim.core.model.common.Ray;
+import com.fibersim.core.model.common.Vector3;
 import com.fibersim.core.model.condition.Condition;
 import com.fibersim.core.data.dopant.DyeDopant;
 import com.fibersim.core.model.wavelength.Wavelength;
 import com.fibersim.core.model.wavelength.provider.WavelengthProvider;
 import com.fibersim.core.model.wavelength.spectrum.WavelengthSpectrum;
-import com.fibersim.core.utils.VectorUtils;
 import com.fibersim.core.utils.MathUtils;
 
 public class DyeDopantElement implements Element {
@@ -38,7 +38,7 @@ public class DyeDopantElement implements Element {
         }
 
         if(Math.random() < dyeDopant.getQuantumYield()) {
-            ray.setVel(VectorUtils.randomDirection());
+            ray.setVel(Vector3.randomDirection());
 
             Wavelength newWavelength = this.emissionSpectrum.generateWavelength();
 

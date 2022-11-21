@@ -40,4 +40,44 @@ public class Vector3Test {
         Vector3 expectedCross = new Vector3(0, -2.0, 2.0);
         Assertions.assertEquals(0.0, Vector3.sub(cross, expectedCross).norm(), testProperties.DELTA);
     }
+
+    @Test
+    public void projectOnVectorTest() {
+        Vector3 vector = new Vector3(3.0, 4.0, 5.0);
+        Vector3 projectVector = Vector3.X;
+        Vector3 expectedResult = new Vector3(3.0, 0.0, 0.0);
+
+        Vector3 result = Vector3.projectOnVector(vector, projectVector);
+
+        Assertions.assertEquals(0.0, Vector3.sub(result, expectedResult).norm(), testProperties.DELTA);
+    }
+
+    @Test
+    public void projectOnSurfaceTest() {
+        Vector3 vector = new Vector3(3.0, 4.0, 5.0);
+        Vector3 normalVector = Vector3.X;
+        Vector3 expectedResult = new Vector3(0.0, 4.0, 5.0);
+
+        Vector3 result = Vector3.projectOnSurface(vector, normalVector);
+
+        Assertions.assertEquals(0.0, Vector3.sub(result, expectedResult).norm(), testProperties.DELTA);
+    }
+
+    @Test
+    public void reflectOnSurfaceTest() {
+        Vector3 vector = new Vector3(3.0, 4.0, 5.0);
+        Vector3 normalVector = Vector3.X;
+        Vector3 expectedResult = new Vector3(-3.0, 4.0, 5.0);
+
+        Vector3 result = Vector3.reflectOnSurface(vector, normalVector);
+
+        Assertions.assertEquals(0.0, Vector3.sub(result, expectedResult).norm(), testProperties.DELTA);
+    }
+
+    @Test
+    public void randomDirectionTest() {
+        Vector3 result = Vector3.randomDirection();
+
+        Assertions.assertEquals(1.0, result.norm(), testProperties.DELTA);
+    }
 }

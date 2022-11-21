@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Fix PlaneInterphase intersect">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/interphase/InterphaseTest.java" afterDir="false" />
+    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Add interphase tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Vector3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Vector3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/MirrorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/MirrorElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/RefractorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/RefractorElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/CylinderInterphase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/CylinderInterphase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/utils/VectorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/utils/VectorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/common/Vector3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/common/Vector3Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fibersim/core/utils/VectorUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/utils/VectorUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +35,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,7 +70,7 @@
       <recent name="com.fibersim" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in fiberSimulation (1)">
+  <component name="RunManager" selected="JUnit.All in fiberSimulation (2)">
     <configuration name="All in fiberSimulation (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiberSimulation" />
       <option name="PACKAGE_NAME" value="" />
@@ -72,7 +79,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in fiberSimulation (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in fiberSimulation (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiberSimulation" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -116,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in fiberSimulation (2)" />
         <item itemvalue="JUnit.All in fiberSimulation (1)" />
         <item itemvalue="JUnit.All in fiberSimulation" />
         <item itemvalue="JUnit.All in fiberSimulation (5)" />
         <item itemvalue="JUnit.All in fiberSimulation (4)" />
-        <item itemvalue="JUnit.All in fiberSimulation (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +224,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669048295685</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fix PlaneInterphase intersect">
+      <created>1669048787828</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669048787828</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add interphase tests">
+      <created>1669048804680</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669048804680</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +264,8 @@
     <MESSAGE value="Add extra condition to detector" />
     <MESSAGE value="Add tests to conditions" />
     <MESSAGE value="Fix PlaneInterphase intersect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix PlaneInterphase intersect" />
+    <MESSAGE value="Add interphase tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add interphase tests" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -262,7 +284,7 @@
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__3_.ic" NAME="All in fiberSimulation (3) Coverage Results" MODIFIED="1669047728058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__4_.ic" NAME="All in fiberSimulation (4) Coverage Results" MODIFIED="1669047770702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__2_.ic" NAME="All in fiberSimulation (2) Coverage Results" MODIFIED="1669047236068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__1_.ic" NAME="All in fiberSimulation (1) Coverage Results" MODIFIED="1669047170218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__1_.ic" NAME="All in fiberSimulation (1) Coverage Results" MODIFIED="1669048764318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation.ic" NAME="All in fiberSimulation Coverage Results" MODIFIED="1669048663358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__5_.ic" NAME="All in fiberSimulation (5) Coverage Results" MODIFIED="1669048073234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>

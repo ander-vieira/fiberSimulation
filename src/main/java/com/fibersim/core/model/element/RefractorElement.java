@@ -5,7 +5,6 @@ import com.fibersim.core.model.common.Ray;
 import com.fibersim.core.model.common.Vector3;
 import com.fibersim.core.model.condition.Condition;
 import com.fibersim.core.model.interphase.Interphase;
-import com.fibersim.core.utils.VectorUtils;
 import com.fibersim.core.utils.MathUtils;
 import lombok.AllArgsConstructor;
 
@@ -43,7 +42,7 @@ public class RefractorElement implements Element {
         double sinI = Math.sqrt(1-cosI*cosI);
         double sinT = sinI*N_I/N_T;
 
-        Vector3 reflectedDirection = VectorUtils.reflectOnSurface(ray.getVel(), normalVector);
+        Vector3 reflectedDirection = Vector3.reflectOnSurface(ray.getVel(), normalVector);
 
         if(sinT > 1) {
             //Total internal reflection
@@ -57,7 +56,7 @@ public class RefractorElement implements Element {
                 ray.setVel(reflectedDirection);
             } else {
                 //Refraction
-                Vector3 tangentVector = VectorUtils.projectOnSurface(ray.getVel(), normalVector);
+                Vector3 tangentVector = Vector3.projectOnSurface(ray.getVel(), normalVector);
                 Vector3 newTangentVector = tangentVector.scale(N_I/N_T);
                 Vector3 newNormalVector = normalVector.scale(cosT);
                 Vector3 refractedDirection = Vector3.add(newTangentVector, newNormalVector);
