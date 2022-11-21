@@ -12,11 +12,13 @@ import com.fibersim.core.utils.MathUtils;
 public class DyeDopantElement implements Element {
     private final Condition condition;
     private final DyeDopant dyeDopant;
+    private final double concentration;
     private final WavelengthSpectrum emissionSpectrum;
 
-    public DyeDopantElement(Condition condition, DyeDopant dyeDopant, WavelengthProvider provider) {
+    public DyeDopantElement(Condition condition, DyeDopant dyeDopant, double concentration, WavelengthProvider provider) {
         this.condition = condition;
         this.dyeDopant = dyeDopant;
+        this.concentration = concentration;
         this.emissionSpectrum = new WavelengthSpectrum(provider, dyeDopant.getSigmaemi());
     }
 
@@ -26,7 +28,7 @@ public class DyeDopantElement implements Element {
             return Double.POSITIVE_INFINITY;
         }
 
-        double alpha = dyeDopant.getConcentration()*dyeDopant.getSigmaAbs().evaluate(ray.getWavelength());
+        double alpha = concentration*dyeDopant.getSigmaAbs().evaluate(ray.getWavelength());
 
         return MathUtils.randomExponential(alpha);
     }

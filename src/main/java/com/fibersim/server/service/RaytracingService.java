@@ -16,6 +16,7 @@ import com.fibersim.core.raytracing.wavelength.spectrum.WavelengthSpectrum;
 import com.fibersim.core.simulation.RaytracingSimulator;
 import com.fibersim.core.raytracing.source.Source;
 import com.fibersim.core.raytracing.source.SunSource;
+import com.fibersim.resources.reader.DyeDopantReader;
 import com.fibersim.resources.reader.MediumReader;
 import com.fibersim.server.dto.RaytracingParamsDTO;
 import com.fibersim.server.dto.RaytracingResultDTO;
@@ -38,6 +39,8 @@ public class RaytracingService {
     SimulationService simulationService;
     @Autowired
     MediumReader mediumReader;
+    @Autowired
+    DyeDopantReader dyeDopantReader;
 
     public RaytracingResultDTO getSimulation(String id) {
         RaytracingSimulation raytracingSimulation = simulationService.getSimulation(id);
@@ -54,9 +57,7 @@ public class RaytracingService {
     }
 
     public void addSimulation(RaytracingParamsDTO paramsDTO) {
-        double N = paramsDTO.getN();
-        double sigmaAbs = paramsDTO.getSigmaAbs();
-        double quantumYield = paramsDTO.getQuantumYield();
+        double concentration = paramsDTO.getN();
         double R = paramsDTO.getR();
         double L = paramsDTO.getL();
 
@@ -67,10 +68,7 @@ public class RaytracingService {
         Medium mediumAir = mediumReader.read("Air");
         Medium mediumPMMA = mediumReader.read("PMMA");
 
-        DyeDopant dyeDopant = new DyeDopant("Rh6G", N,
-                new ConstantWFunction(sigmaAbs),
-                new ConstantWFunction(sigmaAbs),
-                quantumYield);
+        DyeDopant dyeDopant = dyeDopantReader.read("Rh6G");
 
         Interphase leftEndInterphase = new PlaneInterphase(Vector3.O, Vector3.Z);
         Interphase rightEndInterphase = new PlaneInterphase(new Vector3(0, 0, L), Vector3.Z);
@@ -86,7 +84,7 @@ public class RaytracingService {
 
         Element attenuatorElement = new AttenuatorElement(inFiberCondition, mediumPMMA);
         Element detectorElement = new DetectorElement(rightEndInterphase, detector, detectorCondition);
-        Element dyeDopantElement = new DyeDopantElement(inFiberCondition, dyeDopant, wavelengthProvider);
+        Element dyeDopantElement = new DyeDopantElement(inFiberCondition, dyeDopant, concentration, wavelengthProvider);
         Element mirrorElement = new MirrorElement(leftEndInterphase, inCylinderCondition);
         Element refractorElement = new RefractorElement(cylinderInterphase, inZAxisCondition, mediumAir, mediumPMMA);
 

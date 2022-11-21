@@ -8,7 +8,6 @@ import lombok.Getter;
 @AllArgsConstructor
 public class DyeDopant {
     private final String name;
-    private final double concentration;
     private final double quantumYield;
     private final WFunction sigmaAbs;
     private final WFunction sigmaemi;
