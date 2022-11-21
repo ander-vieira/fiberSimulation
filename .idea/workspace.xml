@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Add JSON data processing for medium data">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/function/ScaledWFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/CSVParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/JsonDataReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/MediumReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/WFunctionParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/mediums.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/data/dopant/DyeDopant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/resources/dopant/DyeDopant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/data/medium/Medium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/resources/medium/Medium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/AttenuatorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/AttenuatorElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DyeDopantElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DyeDopantElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/RefractorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/RefractorElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/CSVParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/csv/CSVReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/MediumReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/MediumReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/reader/WFunctionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/resources/parser/WFunctionParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +61,7 @@
       <recent name="C:\Users\Usuario\IdeaProjects\fiberSimulationServer\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuario\IdeaProjects\fiberSimulation\src\main\java\com\fibersim\resources" />
       <recent name="C:\Users\Usuario\IdeaProjects\fiberSimulation\src\main\resources\data" />
       <recent name="C:\Users\Usuario\IdeaProjects\fiberSimulation\src\main\resources\data\" />
     </key>
@@ -234,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669067086025</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add JSON data processing for medium data">
+      <created>1669072857303</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669072857303</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

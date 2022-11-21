@@ -2,6 +2,7 @@ package com.fibersim.resources.reader;
 
 import com.fibersim.core.raytracing.wavelength.function.WFunction;
 import com.fibersim.core.resources.medium.Medium;
+import com.fibersim.resources.parser.WFunctionParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

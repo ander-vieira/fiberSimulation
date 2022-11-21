@@ -1,4 +1,4 @@
-package com.fibersim.resources.reader;
+package com.fibersim.resources.csv;
 
 import com.fibersim.core.raytracing.wavelength.WValue;
 import com.fibersim.core.raytracing.wavelength.Wavelength;
@@ -13,11 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class CSVParser {
+public class CSVReader {
     private static final String CSV_PREFIX = "/csv/";
     private static final String CSV_SUFFIX = ".csv";
 
-    protected List<WValue> readData(String path, int wavelengthColumn, int valueColumn) {
+    public List<WValue> readData(String path, int wavelengthColumn, int valueColumn) {
         Resource resource = new ClassPathResource(CSV_PREFIX+path+CSV_SUFFIX);
         List<WValue> result = new ArrayList<>();
 

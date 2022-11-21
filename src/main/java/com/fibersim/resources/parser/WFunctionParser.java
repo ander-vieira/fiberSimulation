@@ -1,8 +1,9 @@
-package com.fibersim.resources.reader;
+package com.fibersim.resources.parser;
 
 import com.fibersim.core.raytracing.wavelength.WValue;
 import com.fibersim.core.raytracing.wavelength.Wavelength;
 import com.fibersim.core.raytracing.wavelength.function.*;
+import com.fibersim.resources.csv.CSVReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +16,9 @@ public class WFunctionParser {
     private static final String INTERPOLATED_TYPE = "interpolated";
 
     @Autowired
-    CSVParser csvReader;
+    CSVReader csvReader;
 
-    protected WFunction mapToObject(LinkedHashMap<String, Object> hashMap) {
+    public WFunction mapToObject(LinkedHashMap<String, Object> hashMap) {
         String type = (String)hashMap.get("type");
 
         if(CONSTANT_TYPE.equals(type)) {
