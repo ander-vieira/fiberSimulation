@@ -22,7 +22,7 @@ public class PlaneInterphase implements Interphase {
             //Ray is parallel to the plane -> no intersection
             return Double.POSITIVE_INFINITY;
         } else {
-            double ds = posNormal/velNormal;
+            double ds = -posNormal/velNormal;
 
             if(ds <= 0) {
                 return Double.POSITIVE_INFINITY;
