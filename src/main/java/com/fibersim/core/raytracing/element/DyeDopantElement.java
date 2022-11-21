@@ -26,7 +26,7 @@ public class DyeDopantElement implements Element {
             return Double.POSITIVE_INFINITY;
         }
 
-        double alpha = dyeDopant.getN()*dyeDopant.getSigmaAbs().evaluate(ray.getWavelength());
+        double alpha = dyeDopant.getConcentration()*dyeDopant.getSigmaAbs().evaluate(ray.getWavelength());
 
         return MathUtils.randomExponential(alpha);
     }
