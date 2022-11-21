@@ -4,16 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Add interphase tests">
+    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Remove unnecessary VectorUtils class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Vector3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Vector3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/MirrorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/MirrorElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/RefractorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/RefractorElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/CylinderInterphase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/CylinderInterphase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/utils/VectorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/utils/VectorUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/common/Vector3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/common/Vector3Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fibersim/core/utils/VectorUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/utils/VectorUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/data/dopant/DyeDopant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/data/dopant/DyeDopant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/data/medium/Medium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/data/medium/Medium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/RaytracingModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/RaytracingModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/common/Ray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Vector3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/common/Vector3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/AndCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/condition/AndCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/Condition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/condition/Condition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/CylinderCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/condition/CylinderCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/DirectionCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/condition/DirectionCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/NotCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/condition/NotCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/OrCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/condition/OrCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/condition/PlaneDistanceCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/condition/PlaneDistanceCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/detector/Detector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/detector/Detector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/AttenuatorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/AttenuatorElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DetectorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DetectorElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DyeDopantElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/MirrorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/MirrorElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/RefractorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/RefractorElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/CylinderInterphase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/interphase/CylinderInterphase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/Interphase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/interphase/Interphase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/interphase/PlaneInterphase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/interphase/PlaneInterphase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/source/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/source/Source.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/source/SunSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/source/SunSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/wavelength/WValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/WValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/wavelength/Wavelength.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/Wavelength.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/wavelength/function/CachedWFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/function/CachedWFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/wavelength/function/ConstantWFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/function/ConstantWFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/wavelength/function/InterpolatedWFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/function/InterpolatedWFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/wavelength/function/WFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/function/WFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/wavelength/provider/DefaultWavelengthProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/provider/DefaultWavelengthProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/wavelength/provider/WavelengthProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/provider/WavelengthProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/wavelength/spectrum/WavelengthSpectrum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/spectrum/WavelengthSpectrum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/RaytracingSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/RaytracingSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/RaytracingSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/RaytracingSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/StuckDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/StuckDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/server/controller/RaytracingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/controller/RaytracingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/common/RayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/raytracing/common/RayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/common/Vector3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/raytracing/common/Vector3Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/condition/ConditionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/raytracing/condition/ConditionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/interphase/InterphaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/raytracing/interphase/InterphaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +69,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DyeDopantElement.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -70,7 +104,7 @@
       <recent name="com.fibersim" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in fiberSimulation (2)">
+  <component name="RunManager" selected="JUnit.All in fiberSimulation (3)">
     <configuration name="All in fiberSimulation (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiberSimulation" />
       <option name="PACKAGE_NAME" value="" />
@@ -87,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in fiberSimulation (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in fiberSimulation (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiberSimulation" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -123,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in fiberSimulation (3)" />
         <item itemvalue="JUnit.All in fiberSimulation (2)" />
         <item itemvalue="JUnit.All in fiberSimulation (1)" />
         <item itemvalue="JUnit.All in fiberSimulation" />
         <item itemvalue="JUnit.All in fiberSimulation (5)" />
-        <item itemvalue="JUnit.All in fiberSimulation (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669048804680</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Remove unnecessary VectorUtils class">
+      <created>1669066868599</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669066868599</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,7 +306,8 @@
     <MESSAGE value="Add tests to conditions" />
     <MESSAGE value="Fix PlaneInterphase intersect" />
     <MESSAGE value="Add interphase tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add interphase tests" />
+    <MESSAGE value="Remove unnecessary VectorUtils class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary VectorUtils class" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -283,7 +325,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__3_.ic" NAME="All in fiberSimulation (3) Coverage Results" MODIFIED="1669047728058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__4_.ic" NAME="All in fiberSimulation (4) Coverage Results" MODIFIED="1669047770702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__2_.ic" NAME="All in fiberSimulation (2) Coverage Results" MODIFIED="1669047236068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__2_.ic" NAME="All in fiberSimulation (2) Coverage Results" MODIFIED="1669066833229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__1_.ic" NAME="All in fiberSimulation (1) Coverage Results" MODIFIED="1669048764318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation.ic" NAME="All in fiberSimulation Coverage Results" MODIFIED="1669048663358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__5_.ic" NAME="All in fiberSimulation (5) Coverage Results" MODIFIED="1669048073234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

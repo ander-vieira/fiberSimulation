@@ -1,7 +1,7 @@
 package com.fibersim.core.simulation;
 
-import com.fibersim.core.model.RaytracingModel;
-import com.fibersim.core.model.source.Source;
+import com.fibersim.core.raytracing.RaytracingModel;
+import com.fibersim.core.raytracing.source.Source;
 import lombok.Getter;
 import java.util.UUID;
 

@@ -1,8 +1,8 @@
 package com.fibersim.core.simulation;
 
-import com.fibersim.core.model.common.Ray;
-import com.fibersim.core.model.element.Element;
-import com.fibersim.core.model.source.Source;
+import com.fibersim.core.raytracing.common.Ray;
+import com.fibersim.core.raytracing.element.Element;
+import com.fibersim.core.raytracing.source.Source;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 

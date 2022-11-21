@@ -1,6 +1,6 @@
 package com.fibersim.core.simulation;
 
-import com.fibersim.core.model.element.Element;
+import com.fibersim.core.raytracing.element.Element;
 
 import java.util.HashSet;
 import java.util.Set;

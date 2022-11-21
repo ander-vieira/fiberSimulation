@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/raytracing")
+@RequestMapping("/raytracing/api")
 public class RaytracingController {
     @Autowired
     RaytracingService raytracingService;

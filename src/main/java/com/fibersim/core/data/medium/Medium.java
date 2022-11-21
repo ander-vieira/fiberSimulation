@@ -1,6 +1,6 @@
 package com.fibersim.core.data.medium;
 
-import com.fibersim.core.model.wavelength.function.WFunction;
+import com.fibersim.core.raytracing.wavelength.function.WFunction;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
