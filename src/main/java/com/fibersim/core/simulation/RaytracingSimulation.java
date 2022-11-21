@@ -1,4 +1,4 @@
-package com.fibersim.core;
+package com.fibersim.core.simulation;
 
 import com.fibersim.core.model.RaytracingModel;
 import com.fibersim.core.model.source.Source;

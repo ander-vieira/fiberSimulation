@@ -2,13 +2,11 @@ package com.fibersim.core.model.common;
 
 import com.fibersim.core.model.wavelength.Wavelength;
 import lombok.Getter;
-import lombok.Setter;
 
 public class Ray {
     @Getter
     private Vector3 pos;
     @Getter
-    @Setter
     private Vector3 vel;
     @Getter
     private Wavelength wavelength;
@@ -26,6 +24,10 @@ public class Ray {
 
     public void move(double ds) {
         this.pos = Vector3.add(this.pos, this.vel.scale(ds));
+    }
+
+    public void setVel(Vector3 vel) {
+        this.vel = vel.unit();
     }
 
     public void setWavelength(Wavelength wavelength) {

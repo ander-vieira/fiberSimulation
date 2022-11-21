@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Change gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Add unit tests for common model classes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/CoreApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/TestProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/common/RayTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/common/Vector3Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/utils/MathUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/utils/VectorUtilsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/RaytracingSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/RaytracingSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/model/common/Ray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulator/RaytracingSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/RaytracingSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulator/StuckDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/StuckDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/server/mapper/RaytracingResultMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/mapper/RaytracingResultMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/SimulationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/SimulationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +36,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/fibersim/core/model/element/DyeDopantElement.java" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2HeOBo4I2oJBXakSbJwt7bAphTU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -39,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "16",
-    "last_opened_file_path": "C:/Users/Usuario/IdeaProjects/fiberSimulation",
+    "last_opened_file_path": "C:/Users/Usuario/IdeaProjects/fiberSimulationServerOld/src/test/java/com/fibersim/fiberSimulationServer/core/util/MathUtilsTest.java",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "inlay.hints"
   }
@@ -49,37 +67,69 @@
       <recent name="C:\Users\Usuario\IdeaProjects\fiberSimulationServer\src\main\resources\templates" />
       <recent name="C:\Users\Usuario\IdeaProjects\fiberSimulationServer\src\main\resources" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.fibersim.core" />
+      <recent name="com.fibersim" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="FiberSimServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.fibersim.server.FiberSimServerApplication" />
+  <component name="RunManager" selected="JUnit.All in fiberSimulation (1)">
+    <configuration name="All in fiberSimulation (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiberSimulation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fibersim.server.dto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="All in fiberSimulation (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiberSimulation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+    <configuration name="All in fiberSimulation (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiberSimulation" />
-      <option name="filePath" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in fiberSimulation (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fiberSimulation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in fiberSimulation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fiberSimulation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.fibersim in fiberSimulation" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="fiberSimulation" />
+      <option name="PACKAGE_NAME" value="com.fibersim" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FiberSimServerApplication" />
+        <item itemvalue="JUnit.All in fiberSimulation (1)" />
+        <item itemvalue="JUnit.All in fiberSimulation" />
+        <item itemvalue="JUnit.All in fiberSimulation (5)" />
+        <item itemvalue="JUnit.All in fiberSimulation (4)" />
+        <item itemvalue="JUnit.All in fiberSimulation (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +156,49 @@
       <option name="project" value="LOCAL" />
       <updated>1668704899450</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Change gitignore">
+      <created>1668704958957</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668704958957</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add README">
+      <created>1668705573383</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668705573383</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add support for wavelength dependant properties, fixed asynchronous simulation">
+      <created>1668725253683</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668725253683</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add TODO and roadmap">
+      <created>1668726588370</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668726588370</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactor package">
+      <created>1668726644439</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668726644439</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Version 0.1.0">
+      <created>1668726685988</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668726685988</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,12 +215,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Change gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change gitignore" />
+    <MESSAGE value="Add README" />
+    <MESSAGE value="Add support for wavelength dependant properties, fixed asynchronous simulation" />
+    <MESSAGE value="Add TODO and roadmap" />
+    <MESSAGE value="Refactor package" />
+    <MESSAGE value="Version 0.1.0" />
+    <MESSAGE value="Add unit tests for common model classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add unit tests for common model classes" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.fibersim.fiberSimServer.raytracing.simulator.RaytracingSimulator" memberName="future" />
+        <PinnedItemInfo parentTag="com.fibersim.core.model.common.RayTest" memberName="testProperties" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
@@ -136,5 +235,8 @@
         <watch expression="com.fibersim.fiberSimServer.raytracing.common.Vector3.sub(ray.pos, ray.vel.scale(ds))" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation.ic" NAME="All in fiberSimulation Coverage Results" MODIFIED="1669045448608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

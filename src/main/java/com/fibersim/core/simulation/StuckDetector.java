@@ -1,4 +1,4 @@
-package com.fibersim.core.simulator;
+package com.fibersim.core.simulation;
 
 import com.fibersim.core.model.element.Element;
 

@@ -1,7 +1,7 @@
 package com.fibersim.server.mapper;
 
 import com.fibersim.server.dto.RaytracingResultDTO;
-import com.fibersim.core.RaytracingSimulation;
+import com.fibersim.core.simulation.RaytracingSimulation;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
