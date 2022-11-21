@@ -3,7 +3,7 @@ package com.fibersim.core.raytracing.element;
 import com.fibersim.core.raytracing.common.Ray;
 import com.fibersim.core.raytracing.common.Vector3;
 import com.fibersim.core.raytracing.condition.Condition;
-import com.fibersim.core.data.dopant.DyeDopant;
+import com.fibersim.core.resources.dopant.DyeDopant;
 import com.fibersim.core.raytracing.wavelength.Wavelength;
 import com.fibersim.core.raytracing.wavelength.provider.WavelengthProvider;
 import com.fibersim.core.raytracing.wavelength.spectrum.WavelengthSpectrum;

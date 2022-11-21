@@ -1,4 +1,4 @@
-package com.fibersim.core.data.medium;
+package com.fibersim.core.resources.medium;
 
 import com.fibersim.core.raytracing.wavelength.function.WFunction;
 import lombok.AllArgsConstructor;

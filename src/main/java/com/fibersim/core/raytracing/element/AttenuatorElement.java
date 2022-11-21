@@ -1,6 +1,6 @@
 package com.fibersim.core.raytracing.element;
 
-import com.fibersim.core.data.medium.Medium;
+import com.fibersim.core.resources.medium.Medium;
 import com.fibersim.core.raytracing.condition.Condition;
 import com.fibersim.core.raytracing.common.Ray;
 import com.fibersim.core.utils.MathUtils;

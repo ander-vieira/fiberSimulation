@@ -1,9 +1,9 @@
 package com.fibersim.server.service;
 
-import com.fibersim.core.data.medium.Medium;
+import com.fibersim.core.resources.medium.Medium;
 import com.fibersim.core.raytracing.common.Vector3;
 import com.fibersim.core.raytracing.condition.*;
-import com.fibersim.core.data.dopant.DyeDopant;
+import com.fibersim.core.resources.dopant.DyeDopant;
 import com.fibersim.core.raytracing.element.*;
 import com.fibersim.core.raytracing.interphase.CylinderInterphase;
 import com.fibersim.core.raytracing.interphase.Interphase;
@@ -16,6 +16,7 @@ import com.fibersim.core.raytracing.wavelength.spectrum.WavelengthSpectrum;
 import com.fibersim.core.simulation.RaytracingSimulator;
 import com.fibersim.core.raytracing.source.Source;
 import com.fibersim.core.raytracing.source.SunSource;
+import com.fibersim.resources.reader.MediumReader;
 import com.fibersim.server.dto.RaytracingParamsDTO;
 import com.fibersim.server.dto.RaytracingResultDTO;
 import com.fibersim.server.mapper.RaytracingResultMapper;
@@ -35,6 +36,8 @@ public class RaytracingService {
     RaytracingResultMapper raytracingResultMapper;
     @Autowired
     SimulationService simulationService;
+    @Autowired
+    MediumReader mediumReader;
 
     public RaytracingResultDTO getSimulation(String id) {
         RaytracingSimulation raytracingSimulation = simulationService.getSimulation(id);
@@ -61,8 +64,8 @@ public class RaytracingService {
 
         WavelengthProvider wavelengthProvider = new DefaultWavelengthProvider(440e-9, 740e-9, 100);
 
-        Medium mediumAir = new Medium("Air", new ConstantWFunction(1.0), new ConstantWFunction(0.0));
-        Medium mediumPMMA = new Medium("PMMA", new ConstantWFunction(1.492), new ConstantWFunction(0.0));
+        Medium mediumAir = mediumReader.read("Air");
+        Medium mediumPMMA = mediumReader.read("PMMA");
 
         DyeDopant dyeDopant = new DyeDopant("Rh6G", N,
                 new ConstantWFunction(sigmaAbs),
@@ -81,13 +84,11 @@ public class RaytracingService {
 
         Detector detector = new Detector(wavelengthProvider);
 
-        Element attenuatorElement = new AttenuatorElement(inFiberCondition,
-                mediumPMMA);
+        Element attenuatorElement = new AttenuatorElement(inFiberCondition, mediumPMMA);
         Element detectorElement = new DetectorElement(rightEndInterphase, detector, detectorCondition);
         Element dyeDopantElement = new DyeDopantElement(inFiberCondition, dyeDopant, wavelengthProvider);
         Element mirrorElement = new MirrorElement(leftEndInterphase, inCylinderCondition);
-        Element refractorElement = new RefractorElement(cylinderInterphase, inZAxisCondition,
-                mediumAir, mediumPMMA);
+        Element refractorElement = new RefractorElement(cylinderInterphase, inZAxisCondition, mediumAir, mediumPMMA);
 
         Source sunSource = new SunSource(new Vector3(-R, 2*R, 0), Vector3.X.scale(2*R), Vector3.Z.scale(L),
                 new WavelengthSpectrum(wavelengthProvider, new ConstantWFunction(1)),
@@ -101,7 +102,5 @@ public class RaytracingService {
         raytracingSimulator.simulate(raytracingSimulation);
 
         simulationService.addSimulation(raytracingSimulation);
-
-        System.out.println("Done simulating");
     }
 }

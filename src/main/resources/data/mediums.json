@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Air",
+    "refractionIndex": {
+      "type": "constant",
+      "value": 1.0
+    },
+    "attenuation": {
+      "type": "constant",
+      "value": 0.0
+    }
+  },
+  {
+    "name": "Cladding",
+    "refractionIndex": {
+      "type": "constant",
+      "value": 1.5
+    },
+    "attenuation": {
+      "type": "constant",
+      "value": 0.0
+    }
+  },
+  {
+    "name": "PMMA",
+    "refractionIndex": {
+      "type": "constant",
+      "value": 1.492
+    },
+    "attenuation": {
+      "type": "constant",
+      "value": 0.0
+    }
+  }
+]
