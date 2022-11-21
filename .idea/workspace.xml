@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Add unit tests for common model classes">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/condition/ConditionTest.java" afterDir="false" />
+    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Fix PlaneInterphase intersect">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fibersim/core/model/interphase/InterphaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
       <recent name="com.fibersim" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in fiberSimulation (2)">
+  <component name="RunManager" selected="JUnit.All in fiberSimulation (1)">
     <configuration name="All in fiberSimulation (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiberSimulation" />
       <option name="PACKAGE_NAME" value="" />
@@ -73,7 +72,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in fiberSimulation (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in fiberSimulation (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fiberSimulation" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -117,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in fiberSimulation (2)" />
         <item itemvalue="JUnit.All in fiberSimulation (1)" />
         <item itemvalue="JUnit.All in fiberSimulation" />
         <item itemvalue="JUnit.All in fiberSimulation (5)" />
         <item itemvalue="JUnit.All in fiberSimulation (4)" />
+        <item itemvalue="JUnit.All in fiberSimulation (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +196,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669045947096</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add extra condition to detector">
+      <created>1669047286089</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669047286089</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add tests to conditions">
+      <created>1669047300550</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669047300550</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix PlaneInterphase intersect">
+      <created>1669048295685</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669048295685</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,7 +240,10 @@
     <MESSAGE value="Refactor package" />
     <MESSAGE value="Version 0.1.0" />
     <MESSAGE value="Add unit tests for common model classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add unit tests for common model classes" />
+    <MESSAGE value="Add extra condition to detector" />
+    <MESSAGE value="Add tests to conditions" />
+    <MESSAGE value="Fix PlaneInterphase intersect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix PlaneInterphase intersect" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -236,9 +259,11 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__3_.ic" NAME="All in fiberSimulation (3) Coverage Results" MODIFIED="1669046273612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__4_.ic" NAME="All in fiberSimulation (4) Coverage Results" MODIFIED="1669046393457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__3_.ic" NAME="All in fiberSimulation (3) Coverage Results" MODIFIED="1669047728058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__4_.ic" NAME="All in fiberSimulation (4) Coverage Results" MODIFIED="1669047770702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__2_.ic" NAME="All in fiberSimulation (2) Coverage Results" MODIFIED="1669047236068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__1_.ic" NAME="All in fiberSimulation (1) Coverage Results" MODIFIED="1669047170218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation.ic" NAME="All in fiberSimulation Coverage Results" MODIFIED="1669046749483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation.ic" NAME="All in fiberSimulation Coverage Results" MODIFIED="1669048663358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fiberSimulation$All_in_fiberSimulation__5_.ic" NAME="All in fiberSimulation (5) Coverage Results" MODIFIED="1669048073234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
