@@ -10,5 +10,5 @@ public class DyeDopant {
     private final String name;
     private final double quantumYield;
     private final WFunction sigmaAbs;
-    private final WFunction sigmaemi;
+    private final WFunction sigmaEmi;
 }

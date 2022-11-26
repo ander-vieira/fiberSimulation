@@ -3,23 +3,23 @@ package com.fibersim.core.raytracing.element;
 import com.fibersim.core.raytracing.common.Ray;
 import com.fibersim.core.raytracing.common.Vector3;
 import com.fibersim.core.raytracing.condition.Condition;
-import com.fibersim.core.resources.dopant.DyeDopant;
 import com.fibersim.core.raytracing.wavelength.Wavelength;
 import com.fibersim.core.raytracing.wavelength.provider.WavelengthProvider;
-import com.fibersim.core.raytracing.wavelength.spectrum.WavelengthSpectrum;
+import com.fibersim.core.resources.dopant.DyeDopant;
+import com.fibersim.core.resources.variableemission.VariableSpectrumProvider;
 import com.fibersim.core.utils.MathUtils;
 
-public class DyeDopantElement implements Element {
+public class VariableSpectrumDyeDopantElement implements Element {
     private final Condition condition;
     private final DyeDopant dyeDopant;
     private final double concentration;
-    private final WavelengthSpectrum emissionSpectrum;
+    private final VariableSpectrumProvider emissionProvider;
 
-    public DyeDopantElement(Condition condition, DyeDopant dyeDopant, double concentration, WavelengthProvider provider) {
+    public VariableSpectrumDyeDopantElement(Condition condition, DyeDopant dyeDopant, double concentration, WavelengthProvider wavelengthProvider) {
         this.condition = condition;
         this.dyeDopant = dyeDopant;
         this.concentration = concentration;
-        this.emissionSpectrum = new WavelengthSpectrum(provider, dyeDopant.getSigmaEmi());
+        this.emissionProvider = new VariableSpectrumProvider(dyeDopant.getSigmaAbs(), dyeDopant.getSigmaEmi(), wavelengthProvider);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class DyeDopantElement implements Element {
         if(Math.random() < dyeDopant.getQuantumYield()) {
             ray.setVel(Vector3.randomDirection());
 
-            Wavelength newWavelength = this.emissionSpectrum.generateWavelength();
+            Wavelength newWavelength = this.emissionProvider.getEmission(ray.getWavelength()).generateWavelength();
 
             ray.setWavelength(newWavelength);
         } else {
