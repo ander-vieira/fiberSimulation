@@ -84,7 +84,8 @@ public class RaytracingService {
 
         Element attenuatorElement = new AttenuatorElement(inFiberCondition, mediumPMMA);
         Element detectorElement = new DetectorElement(rightEndInterphase, detector, detectorCondition);
-        Element dyeDopantElement = new DyeDopantElement(inFiberCondition, dyeDopant, concentration, wavelengthProvider);
+        //Element dyeDopantElement = new DyeDopantElement(inFiberCondition, dyeDopant, concentration, wavelengthProvider);
+        Element dyeDopantElement = new VariableSpectrumDyeDopantElement(inFiberCondition, dyeDopant, concentration, wavelengthProvider);
         Element mirrorElement = new MirrorElement(leftEndInterphase, inCylinderCondition);
         Element refractorElement = new RefractorElement(cylinderInterphase, inZAxisCondition, mediumAir, mediumPMMA);
 

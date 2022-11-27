@@ -2,6 +2,7 @@ package com.fibersim.core.resources.variableemission;
 
 import com.fibersim.core.raytracing.wavelength.Wavelength;
 import com.fibersim.core.raytracing.wavelength.function.CombinedWFunction;
+import com.fibersim.core.raytracing.wavelength.function.ConstantWFunction;
 import com.fibersim.core.raytracing.wavelength.function.WFunction;
 import com.fibersim.core.raytracing.wavelength.provider.WavelengthProvider;
 import com.fibersim.core.raytracing.wavelength.spectrum.WavelengthSpectrum;
@@ -69,17 +70,19 @@ public class VariableSpectrumProvider {
         }
 
         double determinant = F0*G1-F1*G0;
+        WFunction resultFunction;
 
         if(determinant != 0) {
             double A = (G1-this.Em*G0)/determinant;
             double B = (this.Em*F0-F1)/determinant;
 
-            WFunction resultFunction = new CombinedWFunction(A, B, functionA, functionB);
+            resultFunction = new CombinedWFunction(A, B, functionA, functionB);
 
-            return new WavelengthSpectrum(wavelengthProvider, resultFunction);
         } else {
-            return null;
+            resultFunction = new ConstantWFunction(1);
         }
+
+        return new WavelengthSpectrum(wavelengthProvider, resultFunction);
     }
 
     private double getTotalEnergy(double lambda) {
