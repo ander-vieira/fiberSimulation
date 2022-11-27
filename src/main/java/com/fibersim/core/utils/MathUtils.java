@@ -1,5 +1,7 @@
 package com.fibersim.core.utils;
 
+import java.util.List;
+
 public abstract class MathUtils {
     public static final double h = 6.62607015e-34;
     public static final double c = 2.99792458e8;
@@ -14,5 +16,19 @@ public abstract class MathUtils {
         } else {
             return -Math.log(Math.random())/alpha;
         }
+    }
+
+    public static double getMinimumValue(List<Double> values, double limit) {
+        double minimum = Double.POSITIVE_INFINITY;
+
+        if(values != null) {
+            for(double value : values) {
+                if(value >= limit && value < minimum) {
+                    minimum = value;
+                }
+            }
+        }
+
+        return minimum;
     }
 }

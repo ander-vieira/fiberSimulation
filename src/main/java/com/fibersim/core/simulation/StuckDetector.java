@@ -14,8 +14,8 @@ public class StuckDetector {
         this.stuckElements = new HashSet<>();
     }
 
-    public boolean check(Element element, double ds) {
-        return ds < STUCK_LIMIT && stuckElements.contains(element);
+    public double limit(Element element) {
+        return stuckElements.contains(element) ? STUCK_LIMIT : 0;
     }
 
     public void update(Element element, double ds) {

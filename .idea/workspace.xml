@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Add JSON data processing for dye dopants">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/VariableSpectrumDyeDopantElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/wavelength/function/CombinedWFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/resources/variableemission/VariableSpectrumProvider.java" afterDir="false" />
+    <list default="true" id="21fdc79d-1a8a-4584-a3c1-daf1429c9c24" name="Changes" comment="Add option for emission dependent on absorption wavelength (in progress)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/AttenuatorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/AttenuatorElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DetectorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DetectorElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DyeDopantElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/DyeDopantElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/resources/dopant/DyeDopant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/resources/dopant/DyeDopant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/MirrorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/MirrorElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/RefractorElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/RefractorElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/VariableSpectrumDyeDopantElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/element/VariableSpectrumDyeDopantElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/interphase/CylinderInterphase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/interphase/CylinderInterphase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/interphase/Interphase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/interphase/Interphase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/interphase/PlaneInterphase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/raytracing/interphase/PlaneInterphase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/resources/variableemission/VariableSpectrumProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/resources/variableemission/VariableSpectrumProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/RaytracingSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/RaytracingSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/StuckDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/simulation/StuckDetector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/core/utils/MathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/core/utils/MathUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fibersim/server/service/RaytracingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669074995181</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add option for emission dependent on absorption wavelength (in progress)">
+      <created>1669506157593</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1669506157593</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,7 +316,8 @@
     <MESSAGE value="Refactor DyeDopant parameters" />
     <MESSAGE value="Remove concentration from dye dopant data" />
     <MESSAGE value="Add JSON data processing for dye dopants" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add JSON data processing for dye dopants" />
+    <MESSAGE value="Add option for emission dependent on absorption wavelength (in progress)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add option for emission dependent on absorption wavelength (in progress)" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

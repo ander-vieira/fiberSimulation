@@ -3,7 +3,9 @@ package com.fibersim.core.raytracing.interphase;
 import com.fibersim.core.raytracing.common.Ray;
 import com.fibersim.core.raytracing.common.Vector3;
 
+import java.util.List;
+
 public interface Interphase {
-    double intersect(Ray ray);
+    List<Double> intersect(Ray ray);
     Vector3 getNormalVector(Vector3 pos);
 }

@@ -29,11 +29,7 @@ public class RaytracingSimulator {
             double ds = Double.POSITIVE_INFINITY;
 
             for(Element element : raytracingSimulation.getModel().getElements()) {
-                double dsComponent = element.intersect(ray);
-
-                if(stuckDetector.check(element, dsComponent)) {
-                    dsComponent = Double.POSITIVE_INFINITY;
-                }
+                double dsComponent = element.intersect(ray, stuckDetector.limit(element));
 
                 if(dsComponent < ds) {
                     firstElement = element;
@@ -43,15 +39,13 @@ public class RaytracingSimulator {
 
             if(firstElement == null) {
                 ray.kill();
+            } else {
+                stuckDetector.update(firstElement, ds);
 
-                break;
+                ray.move(ds);
+
+                firstElement.process(ray);
             }
-
-            stuckDetector.update(firstElement, ds);
-
-            ray.move(ds);
-
-            firstElement.process(ray);
         }
     }
 }

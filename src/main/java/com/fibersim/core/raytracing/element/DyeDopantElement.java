@@ -23,7 +23,7 @@ public class DyeDopantElement implements Element {
     }
 
     @Override
-    public double intersect(Ray ray) {
+    public double intersect(Ray ray, double limit) {
         if(!condition.check(ray)) {
             return Double.POSITIVE_INFINITY;
         }

@@ -16,8 +16,8 @@ public class RefractorElement implements Element {
     private final Medium mediumMinus;
 
     @Override
-    public double intersect(Ray ray) {
-        return interphase.intersect(ray);
+    public double intersect(Ray ray, double limit) {
+        return MathUtils.getMinimumValue(interphase.intersect(ray), limit);
     }
 
     @Override

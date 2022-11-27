@@ -3,6 +3,8 @@ package com.fibersim.core.raytracing.interphase;
 import com.fibersim.core.raytracing.common.Ray;
 import com.fibersim.core.raytracing.common.Vector3;
 
+import java.util.List;
+
 public class CylinderInterphase implements Interphase {
     private final Vector3 origin;
     private final Vector3 axis;
@@ -15,7 +17,7 @@ public class CylinderInterphase implements Interphase {
     }
 
     @Override
-    public double intersect(Ray ray) {
+    public List<Double> intersect(Ray ray) {
         Vector3 relativePos = Vector3.sub(ray.getPos(), this.origin);
         Vector3 vel = ray.getVel();
 
@@ -24,7 +26,7 @@ public class CylinderInterphase implements Interphase {
 
         if(a == 0) {
             //Ray is parallel to cylinder axis -> no intersection
-            return Double.POSITIVE_INFINITY;
+            return List.of();
         }
 
         double posAxis = Vector3.dot(relativePos, this.axis);
@@ -34,22 +36,10 @@ public class CylinderInterphase implements Interphase {
 
         if(determinant <= 0) {
             //All roots are imaginary -> ray doesn't intersect cylinder
-            return Double.POSITIVE_INFINITY;
+            return List.of();
         }
 
-        if(C < 0) {
-            //Ray is inside the fiber -> pick second intersection
-            return -B+Math.sqrt(determinant);
-        } else {
-            //Ray is outside the fiber
-            if(B < 0) {
-                //Ray is heading toward the fiber -> pick first intersection
-                return -B-Math.sqrt(determinant);
-            } else {
-                //Ray is heading away from the fiber -> no intersection
-                return Double.POSITIVE_INFINITY;
-            }
-        }
+        return List.of(-B-Math.sqrt(determinant), -B+Math.sqrt(determinant));
     }
 
     @Override

@@ -4,6 +4,7 @@ import com.fibersim.core.raytracing.condition.Condition;
 import com.fibersim.core.raytracing.common.Ray;
 import com.fibersim.core.raytracing.common.Vector3;
 import com.fibersim.core.raytracing.interphase.Interphase;
+import com.fibersim.core.utils.MathUtils;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -12,8 +13,8 @@ public class MirrorElement implements Element {
     private final Condition condition;
 
     @Override
-    public double intersect(Ray ray) {
-        return interphase.intersect(ray);
+    public double intersect(Ray ray, double limit) {
+        return MathUtils.getMinimumValue(interphase.intersect(ray), limit);
     }
 
     @Override
